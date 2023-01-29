@@ -1,6 +1,6 @@
 import "./ExpenseItem.css";
 
-// component is just a js function
+// component is just a js function !
 function ExpenseItem(props) {
   const expenseDate = new Date(2021, 2, 28);
   const expenseTitle = "Car Insurance";
