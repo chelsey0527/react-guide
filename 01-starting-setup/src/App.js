@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
+      {/* We can use props, but we don't HAVE TO */}
       <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
