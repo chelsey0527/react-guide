@@ -38,6 +38,19 @@ const ExpenseForm = () => {
     // });
   };
 
+  const submitHandler = (event) => {
+    // prevent sending request to other pages
+    event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      date: new Date (enteredDate),
+    };
+
+    console.log(expenseData);
+  };
+
   return (
     <form>
       <div className='new-expense__controls'>
@@ -55,7 +68,7 @@ const ExpenseForm = () => {
         </div>
       </div>
       <div className='new-expense__actions'>
-        <button type="submit">Add Expense</button>
+        <button type="submit" onClick={submitHandler}>Add Expense</button>
       </div>
     </form>
   );
