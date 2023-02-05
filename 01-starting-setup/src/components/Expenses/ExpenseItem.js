@@ -7,7 +7,6 @@ import Card from "../UI/Card";
 function ExpenseItem(props) {
   // must be called directly inside the component function, also not in any further functions.
   const [title, setTitle] = useState(props.title);
-  // let title = props.title;
 
   const clickHandler = () => {
     setTitle("updated!");
