@@ -10,8 +10,8 @@ function App() {
 
   return (
     <div>
-      <NewExpense/ >
-      <Expenses data={expenses}/>
+      <NewExpense />
+      <Expenses data={expenses} />
     </div>
   );
 }
