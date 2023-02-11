@@ -1,4 +1,4 @@
 # React complete guide practice
 
-## Formater
+## Formatter
 Eslint
