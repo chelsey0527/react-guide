@@ -6,7 +6,7 @@ const NewExpense = () => {
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
-      id: Math.random().toString
+      id: Math.random().toString,
     };
     console.log(expenseData);
   };
@@ -16,6 +16,6 @@ const NewExpense = () => {
       <ExpenseForm onSaveExpenseData={saveExpenseDataHandler}/>
     </div>
   );
-}
+};
 
 export default NewExpense;

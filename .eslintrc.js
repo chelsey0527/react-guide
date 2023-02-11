@@ -13,6 +13,7 @@ module.exports = {
     'ecmaVersion': 'latest',
     'sourceType': 'module',
   },
+  'parser': 'babel-eslint',
   'plugins': [
     'react',
   ],
@@ -23,5 +24,12 @@ module.exports = {
     'max-len': 'off', // 最大長度限制
     'new-cap': 'off', // 函式首字小寫
     'prefer-const': 'off',
+  },
+  'parserOptions': {
+    'ecmaFeatures': {
+      'jsx': true,
+    },
+    'ecmaVersion': 12,
+    'sourceType': 'module',
   },
 };

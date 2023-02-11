@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import "./ExpenseItem.css";
+import React, {useState} from 'react';
+import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from "../UI/Card";
+import Card from '../UI/Card';
 
 // component is just a combination fo HTML and JS function !
 function ExpenseItem(props) {
@@ -9,9 +9,9 @@ function ExpenseItem(props) {
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
-    setTitle("updated!");
-    console.log("new:" + title);
-  }
+    setTitle('updated!');
+    console.log('new:' + title);
+  };
 
   return (
     <Card className="expense-item">
