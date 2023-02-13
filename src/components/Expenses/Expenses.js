@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import ExpensesFilter from '../NewExpenses/ExpensesFilter';
-import Card from '../UI/Card';
-import ExpenseItem from './ExpenseItem';
 import './Expenses.css';
+import ExpensesFilter from './ExpensesFilter';
+import Card from '../UI/Card';
+import ExpensesList from './ExpensesList';
 
 function Expenses(props) {
   // eslint-disable-next-line no-unused-vars
@@ -10,6 +10,7 @@ function Expenses(props) {
 
   const filterChangeHandler = (selectedYear) => {
     console.log(selectedYear);
+    setFilteredYear(selectedYear);
   };
 
   const filteredExpenses = props.items.filter((expense) => {
@@ -20,14 +21,7 @@ function Expenses(props) {
     <>
       <Card className="expenses">
         <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
-        {filteredExpenses.map( (expense, key) =>
-          <ExpenseItem
-            key={key}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />,
-        )}
+        <ExpensesList item={filteredExpenses} />
       </Card>
     </>
   );
